@@ -24,6 +24,7 @@ El contador en pantalla se actualiza automáticamente en tiempo real.
 
 **📦 Estructura del proyecto**
 Scripts/Spawner.cs: Lógica de generación de objetos en posiciones aleatorias.
+
 Scripts/ClickDestruction.cs: Permite destruir objetos con clic izquierdo (raycast).
 
 
