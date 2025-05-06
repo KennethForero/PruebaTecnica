@@ -18,6 +18,7 @@ public class ClickDestruction : MonoBehaviour
             {
                 Destroy(hit.transform.gameObject);
                 spawnerScript.UpdateCount();
+                spawnerScript.RemoveFromList(hit.transform.gameObject);
             }
         }
     }

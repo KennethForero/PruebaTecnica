@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
 
 public class Spawner : MonoBehaviour
 {
@@ -52,9 +53,14 @@ public class Spawner : MonoBehaviour
     public void UpdateCount()
     {
 
-  
         countText.text = "Objetos Activos: " + spawnList.Count;
     }
+
+    public void RemoveFromList(GameObject obj)
+    {
+        spawnList.Remove(obj);
+    }
+
 
 
 
