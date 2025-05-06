@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
+  - component: {fileID: 330585549}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -272,9 +273,21 @@ MonoBehaviour:
   countText: {fileID: 915743946}
   prefabToSpawn: {fileID: 2360159741169352362, guid: 25f294464a3af3a4b9232c065b58a801, type: 3}
   maxSpawn: 10
-  timeGenerator: 0.3
+  timeGenerator: 2
   yHight: 0
   spawnList: []
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c613b2a4a580154cb4912ccfa5ec7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &404080985
 GameObject:
   m_ObjectHideFlags: 0

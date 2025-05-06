@@ -16,9 +16,13 @@ public class ClickDestruction : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                Destroy(hit.transform.gameObject);
-                spawnerScript.UpdateCount();
-                spawnerScript.RemoveFromList(hit.transform.gameObject);
+                // Verificar si el objeto tocado tiene el tag "Enemigo"
+                if (hit.transform.CompareTag("Enemigo"))
+                {
+                    Destroy(hit.transform.gameObject);
+                    spawnerScript.RemoveFromList(hit.transform.gameObject);
+                    spawnerScript.UpdateCount();
+                }
             }
         }
     }
