@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Rendering;
 
 public class Spawner : MonoBehaviour
 {
@@ -25,7 +26,7 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Loop());
-
+ 
     }
     IEnumerator Loop()
     {
@@ -41,6 +42,15 @@ public class Spawner : MonoBehaviour
                 GameObject newObject = Instantiate(prefabToSpawn,spawnPos, Quaternion.identity);
 
                 spawnList.Add( newObject );
+
+               
+                Renderer renderer = newObject.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    Color randomColor = new Color(Random.value, Random.value, Random.value);
+                    renderer.material.color = randomColor;
+                }
+
                 UpdateCount();
             }
             yield return new WaitForSeconds(timeGenerator);  
